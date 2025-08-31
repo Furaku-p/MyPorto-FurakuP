@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio – Nama Kamu</title>
+  <meta name="description" content="Portfolio sederhana, cepat, dan responsive. Dibuat untuk Vercel / GitHub.">
+  <meta property="og:title" content="Portfolio – Nama Kamu">
+  <meta property="og:description" content="Portfolio sederhana, cepat, dan responsive.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#"><span>Nama</span><span class="accent">Kamu</span></a>
+    <nav class="nav">
+      <a href="#about">Tentang</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+      <button id="theme-toggle" aria-label="Toggle tema">🌓</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="eyebrow">Halo, aku</p>
+        <h1>Nama <span class="accent">Kamu</span></h1>
+        <p class="lead">Frontend/Backend/Designer · berbasis di Indonesia. Suka bikin web cepat dan rapi.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">Lihat Proyek</a>
+          <a class="btn" href="CV.pdf" target="_blank" rel="noopener">Unduh CV</a>
+        </div>
+        <div class="links">
+          <a href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:email@domain.com">Email</a>
+        </div>
+      </div>
+      <img class="hero-img" src="https://picsum.photos/seed/portrait/600/600" alt="Foto profil" loading="lazy">
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah developer dengan ketertarikan pada performa web, aksesibilitas, dan DX. Pengalaman dengan <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React</strong>, dan <strong>Node.js</strong>.</p>
+      <ul class="badges">
+        <li>React</li>
+        <li>Next.js</li>
+        <li>Node</li>
+        <li>Tailwind</li>
+        <li>Express</li>
+        <li>PostgreSQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2>Proyek Pilihan</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/app1/800/600" alt="Preview Proyek 1" loading="lazy">
+          <div class="card-body">
+            <h3>Aplikasi Dashboard</h3>
+            <p>Dashboard analitik responsif dengan autentikasi dan grafik interaktif.</p>
+            <div class="tags"><span>Next.js</span><span>Recharts</span><span>Auth</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">Kode</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/app2/800/600" alt="Preview Proyek 2" loading="lazy">
+          <div class="card-body">
+            <h3>Landing Page Produk</h3>
+            <p>Halaman marketing berfokus konversi dengan performa tinggi.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>Netlify Forms</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">Kode</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/app3/800/600" alt="Preview Proyek 3" loading="lazy">
+          <div class="card-body">
+            <h3>Komponen UI</h3>
+            <p>Paket komponen aksesibel untuk proyek internal.</p>
+            <div class="tags"><span>TypeScript</span><span>A11y</span><span>Storybook</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">Kode</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Kontak</h2>
+      <p>Ingin berkolaborasi atau ada pertanyaan? Kirim pesan lewat form ini:</p>
+      <form class="contact-form" method="post" action="https://formspree.io/f/xxxxx" onsubmit="return validateForm(event)">
+        <div class="form-row">
+          <label>Nama
+            <input type="text" name="name" placeholder="Nama kamu" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="email@domain.com" required>
+          </label>
+        </div>
+        <label>Pesan
+          <textarea name="message" rows="5" placeholder="Tulis pesan..." required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Kirim</button>
+        <p class="form-note">Ganti action Formspree dengan ID milikmu agar form berfungsi.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Nama Kamu. Dibuat dengan HTML+CSS. Di-host di Vercel.</small>
+      <a class="top" href="#top" aria-label="Kembali ke atas">↑</a>
+    </div>
+  </footer>
+</body>
+</html>
